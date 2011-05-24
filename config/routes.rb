@@ -1,7 +1,10 @@
 RailsForProposal::Application.routes.draw do
-  resources :users
 
-  resources :requests
+  resources :users 
+
+  resources :requests do
+    resources :section_roles
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
