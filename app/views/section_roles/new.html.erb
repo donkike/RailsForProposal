@@ -1,2 +1,6 @@
-<h1>SectionRoles#new</h1>
-<p>Find me in app/views/section_roles/new.html.erb</p>
+<%= semantic_form_for [@request, @section_role] do |form|%>
+  <%= form.inputs do %>
+    <%= form.input :user %>
+    <%= form.input :section %>
+  <% end %>
+<% end %>
