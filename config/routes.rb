@@ -1,4 +1,6 @@
 RailsForProposal::Application.routes.draw do
+  resources :users
+
   resources :requests
 
   # The priority is based upon order of creation:
