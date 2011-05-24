@@ -1,0 +1,44 @@
+<% title "Request" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+<p>
+  <strong>Start Date:</strong>
+  <%= @request.start_date %>
+</p>
+<p>
+  <strong>Decision Date:</strong>
+  <%= @request.decision_date %>
+</p>
+<p>
+  <strong>Company:</strong>
+  <%= @request.company %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%= @request.comment %>
+</p>
+<p>
+  <strong>Filename:</strong>
+  <%= @request.filename %>
+</p>
+<p>
+  <strong>Response Time:</strong>
+  <%= @request.response_time %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @request.status %>
+</p>
+<p>
+  <strong>Average:</strong>
+  <%= @request.average %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_request_path(@request) %> |
+  <%= link_to "Destroy", @request, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", requests_path %>
+</p>

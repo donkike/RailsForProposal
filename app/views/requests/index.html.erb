@@ -1,0 +1,33 @@
+<% title "Requests" %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Start Date</th>
+    <th>Decision Date</th>
+    <th>Company</th>
+    <th>Comment</th>
+    <th>Filename</th>
+    <th>Response Time</th>
+    <th>Status</th>
+    <th>Average</th>
+  </tr>
+  <% for request in @requests %>
+    <tr>
+      <td><%= request.name %></td>
+      <td><%= request.start_date %></td>
+      <td><%= request.decision_date %></td>
+      <td><%= request.company %></td>
+      <td><%= request.comment %></td>
+      <td><%= request.filename %></td>
+      <td><%= request.response_time %></td>
+      <td><%= request.status %></td>
+      <td><%= request.average %></td>
+      <td><%= link_to "Show", request %></td>
+      <td><%= link_to "Edit", edit_request_path(request) %></td>
+      <td><%= link_to "Destroy", request, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Request", new_request_path %></p>

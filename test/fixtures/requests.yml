@@ -1,0 +1,21 @@
+one:
+  name: MyString
+  start_date: 2011-05-24
+  decision_date: 2011-05-24
+  company: MyString
+  comment: MyText
+  filename: MyString
+  response_time: 1
+  status: MyString
+  average: 1.5
+
+two:
+  name: MyString
+  start_date: 2011-05-24
+  decision_date: 2011-05-24
+  company: MyString
+  comment: MyText
+  filename: MyString
+  response_time: 1
+  status: MyString
+  average: 1.5

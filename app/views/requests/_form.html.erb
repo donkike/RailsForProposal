@@ -1,0 +1,40 @@
+<%= form_for @request do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </p>
+  <p>
+    <%= f.label :decision_date %><br />
+    <%= f.date_select :decision_date %>
+  </p>
+  <p>
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_area :comment %>
+  </p>
+  <p>
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </p>
+  <p>
+    <%= f.label :response_time %><br />
+    <%= f.text_field :response_time %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :average %><br />
+    <%= f.text_field :average %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
