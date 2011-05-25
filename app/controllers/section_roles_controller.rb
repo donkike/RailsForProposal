@@ -4,7 +4,8 @@ class SectionRolesController < ApplicationController
   end
 
   def edit
-   rfp
+    rfp
+    @section_role = SectionRole.find(params[:id])
   end
   
   private
