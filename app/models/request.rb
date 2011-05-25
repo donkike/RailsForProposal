@@ -3,4 +3,5 @@ class Request < ActiveRecord::Base
 
   has_many :section_roles
   has_many :users, :through => :section_roles
+  
 end

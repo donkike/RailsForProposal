@@ -1,14 +1,14 @@
 class SectionRolesController < ApplicationController
-  def new
-#   @section_role = request.section_role.build
+  def new    
+    @section_role = rfp.section_roles.build
   end
 
   def edit
-   request
+   rfp
   end
-
+  
   private
-  def request
+  def rfp
     @request = Request.find(params[:request_id])
   end
 
