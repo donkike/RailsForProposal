@@ -8,3 +8,4 @@ tmp/
 #*
 schema.rb
 .rvmrc
+.project
