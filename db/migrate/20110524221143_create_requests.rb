@@ -8,7 +8,7 @@ class CreateRequests < ActiveRecord::Migration
       t.text :comment
       t.string :filename
       t.integer :response_time
-      t.string :status
+      t.string :status, :default => "pending"
       t.float :average
       t.timestamps
     end
