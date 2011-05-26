@@ -1,6 +1,6 @@
 class RequestSectionsController < ApplicationController
   def index
-    @request_sections = RequestSection.all
+    @request_sections = rfp.request_sections
   end
 
   def show
@@ -8,7 +8,7 @@ class RequestSectionsController < ApplicationController
   end
 
   def new
-    @request_section = RequestSection.new
+    @request_section = rfp.request_sections.build
   end
 
   def create
@@ -37,5 +37,10 @@ class RequestSectionsController < ApplicationController
     @request_section = RequestSection.find(params[:id])
     @request_section.destroy
     redirect_to request_sections_url, :notice => "Successfully destroyed request section."
+  end
+  
+  private
+  def rfp
+    @request = Request.find(params[:request_id])
   end
 end
