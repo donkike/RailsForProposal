@@ -6,7 +6,9 @@ RailsForProposal::Application.routes.draw do
 
   resources :sections
 
-  resources :users 
+  resources :users do
+     resources :section_roles
+  end
 
   resources :requests do
     resources :section_roles
