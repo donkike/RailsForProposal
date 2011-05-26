@@ -1,0 +1,12 @@
+<% title "Section" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @section.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_section_path(@section) %> |
+  <%= link_to "Destroy", @section, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", sections_path %>
+</p>

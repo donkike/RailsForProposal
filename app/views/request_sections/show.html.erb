@@ -1,0 +1,20 @@
+<% title "Request Section" %>
+
+<p>
+  <strong>Section:</strong>
+  <%= @request_section.section_id %>
+</p>
+<p>
+  <strong>Request:</strong>
+  <%= @request_section.request_id %>
+</p>
+<p>
+  <strong>Comment:</strong>
+  <%= @request_section.comment %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_request_section_path(@request_section) %> |
+  <%= link_to "Destroy", @request_section, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", request_sections_path %>
+</p>

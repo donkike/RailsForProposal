@@ -1,0 +1,21 @@
+<% title "Section Items" %>
+
+<table>
+  <tr>
+    <th>Request Section</th>
+    <th>Name</th>
+    <th>Value</th>
+  </tr>
+  <% for section_item in @section_items %>
+    <tr>
+      <td><%= section_item.request_section_id %></td>
+      <td><%= section_item.name %></td>
+      <td><%= section_item.value %></td>
+      <td><%= link_to "Show", section_item %></td>
+      <td><%= link_to "Edit", edit_section_item_path(section_item) %></td>
+      <td><%= link_to "Destroy", section_item, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Section Item", new_section_item_path %></p>

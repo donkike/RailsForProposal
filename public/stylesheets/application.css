@@ -73,3 +73,10 @@ a {
 .error_messages ul {
   margin: 0;
 }
+
+/* TABLES */
+td, th {
+	border-style: solid;
+	border-width: 2px;
+	border-collapse: collapse;
+}

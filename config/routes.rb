@@ -1,5 +1,11 @@
 RailsForProposal::Application.routes.draw do
 
+  resources :section_items
+
+  resources :request_sections
+
+  resources :sections
+
   resources :users 
 
   resources :requests do
