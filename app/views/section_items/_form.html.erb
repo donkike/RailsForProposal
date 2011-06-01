@@ -1,16 +1,8 @@
-<%= form_for @section_item do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :request_section_id %><br />
-    <%= f.text_field :request_section_id %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :value %><br />
-    <%= f.text_field :value %>
-  </p>
-  <p><%= f.submit %></p>
+<%= semantic_form_for [@request_section.request, @request_section, @section_item] do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :request_section_id, :as => :hidden %>
+    <%= f.input :name %>
+    <%= f.input :value %>
+  <% end -%>
+  <%= f.buttons %>
 <% end %>

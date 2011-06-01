@@ -4,5 +4,6 @@ class RequestSection < ActiveRecord::Base
   belongs_to :request
   belongs_to :section
   has_many :section_roles
+  has_many :section_items
   
 end

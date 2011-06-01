@@ -99,4 +99,9 @@ div#general-info div {
 	margin: 3px;
 }
 
+div#sections li a {
+	margin-left: 2px;
+	font-size: 8px;
+}
+
 

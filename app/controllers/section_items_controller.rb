@@ -8,14 +8,15 @@ class SectionItemsController < ApplicationController
   end
 
   def new
-    @section_item = SectionItem.new
+    @section_item = request_section.section_items.build
   end
 
   def create
     @section_item = SectionItem.new(params[:section_item])
     if @section_item.save
-      redirect_to @section_item, :notice => "Successfully created section item."
+      redirect_to @section_item.request_section.request, :notice => "Successfully created section item."
     else
+      request_section
       render :action => 'new'
     end
   end
@@ -37,5 +38,10 @@ class SectionItemsController < ApplicationController
     @section_item = SectionItem.find(params[:id])
     @section_item.destroy
     redirect_to section_items_url, :notice => "Successfully destroyed section item."
+  end
+  
+  private
+  def request_section
+    @request_section = RequestSection.find(params[:request_section_id])    
   end
 end

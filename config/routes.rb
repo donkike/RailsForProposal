@@ -1,7 +1,5 @@
 RailsForProposal::Application.routes.draw do
 
-  resources :section_items
-
   resources :sections
 
   resources :users do
@@ -10,7 +8,9 @@ RailsForProposal::Application.routes.draw do
 
   resources :requests do
     resources :section_roles
-    resources :request_sections
+    resources :request_sections do
+      resources :section_items
+    end
   end
 
   # The priority is based upon order of creation:

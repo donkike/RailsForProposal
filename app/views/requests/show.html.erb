@@ -22,8 +22,8 @@
   <div id="sections">
     <strong>Secciones</strong>
     <ul>
-      <% for section in @request.sections %>
-        <li><%= section.name %></li>
+      <% for request_section in @request.request_sections %>
+        <li><%= request_section.section.name %><%= link_to "Agregar item", new_request_request_section_section_item_path(@request, request_section) %></li>
       <% end -%>
     </ul>
     <%= link_to "Agregar sección", new_request_request_section_path(@request) %>
