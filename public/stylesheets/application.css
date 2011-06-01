@@ -80,3 +80,23 @@ td, th {
 	border-width: 2px;
 	border-collapse: collapse;
 }
+
+/* RFP SHOW */
+
+div#general-info {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 10px;
+	width: 30%;
+	background-color: #E8D99E;
+}
+
+div#general-info div {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-color: #FFF;
+	padding: 5px;
+	margin: 3px;
+}
+
+

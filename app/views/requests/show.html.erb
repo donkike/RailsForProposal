@@ -5,6 +5,7 @@
     <h2><%= @request.name %></h2>
   </div>
   <div id="responsibles">
+    <strong>Responsables</strong>
     <ul>
       <% for user in @request.users %>
         <li><%= user.full_name %></li>
@@ -13,6 +14,7 @@
     <%= link_to "Agregar responsable", new_request_section_role_path(@request) %>
   </div>
   <div id="sections">
+    <strong>Secciones</strong>
     <ul>
       <% for section in @request.sections %>
         <li><%= section.name %></li>
