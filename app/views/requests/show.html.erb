@@ -7,7 +7,7 @@
   <div id="responsibles">
     <ul>
       <% for user in @request.users %>
-        <li><%= user.name %></li>
+        <li><%= user.full_name %></li>
       <% end -%>
     </ul>
     <%= link_to "Agregar responsable", new_request_section_role_path(@request) %>
@@ -23,7 +23,12 @@
 </div>
 
 <div id="status">
-  
+  <div id="accept">
+    
+  </div>
+  <div id="reject">
+    
+  </div>
 </div>
 
 
