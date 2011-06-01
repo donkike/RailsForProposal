@@ -9,7 +9,7 @@ class CreateRequests < ActiveRecord::Migration
       t.string :filename
       t.integer :response_time
       t.string :status, :default => "pending"
-      t.float :average
+      t.float :average, :default => 0.0
       t.timestamps
     end
   end

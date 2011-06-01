@@ -1,41 +1,31 @@
 <% title "Request" %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @request.name %>
-</p>
-<p>
-  <strong>Start Date:</strong>
-  <%= @request.start_date %>
-</p>
-<p>
-  <strong>Decision Date:</strong>
-  <%= @request.decision_date %>
-</p>
-<p>
-  <strong>Company:</strong>
-  <%= @request.company %>
-</p>
-<p>
-  <strong>Comment:</strong>
-  <%= @request.comment %>
-</p>
-<p>
-  <strong>Filename:</strong>
-  <%= @request.filename %>
-</p>
-<p>
-  <strong>Response Time:</strong>
-  <%= @request.response_time %>
-</p>
-<p>
-  <strong>Status:</strong>
-  <%= @request.status %>
-</p>
-<p>
-  <strong>Average:</strong>
-  <%= @request.average %>
-</p>
+<div id="general-info">
+  <div id="rfp-info">
+    <h2><%= @request.name %></h2>
+  </div>
+  <div id="responsibles">
+    <ul>
+      <% for user in @request.users %>
+        <li><%= user.name %></li>
+      <% end -%>
+    </ul>
+    <%= link_to "Agregar responsable", new_request_section_role_path(@request) %>
+  </div>
+  <div id="sections">
+    <ul>
+      <% for section in @request.sections %>
+        <li><%= section.name %></li>
+      <% end -%>
+    </ul>
+    <%= link_to "Agregar sección", new_request_request_section_path(@request) %>
+  </div>
+</div>
+
+<div id="status">
+  
+</div>
+
 
 <p>
   <%= link_to "Edit", edit_request_path(@request) %> |

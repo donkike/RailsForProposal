@@ -6,11 +6,9 @@
     <th>Start Date</th>
     <th>Decision Date</th>
     <th>Company</th>
-    <th>Comment</th>
-    <th>Filename</th>
-    <th>Response Time</th>
     <th>Status</th>
     <th>Average</th>
+    <th>Comment</th>
   </tr>
   <% for request in @requests %>
     <tr>
@@ -18,11 +16,9 @@
       <td><%= request.start_date %></td>
       <td><%= request.decision_date %></td>
       <td><%= request.company %></td>
-      <td><%= request.comment %></td>
-      <td><%= request.filename %></td>
-      <td><%= request.response_time %></td>
       <td><%= request.status %></td>
       <td><%= request.average %></td>
+      <td><%= request.comment %></td>
       <td><%= link_to "Show", request %></td>
       <td><%= link_to "Edit", edit_request_path(request) %></td>
       <td><%= link_to "Destroy", request, :confirm => 'Are you sure?', :method => :delete %></td>

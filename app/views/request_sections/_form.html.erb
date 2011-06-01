@@ -1,5 +1,6 @@
 <%= semantic_form_for [@request, @request_section] do |form| %>
 	<%= form.inputs do %>
+	  <%= form.input :request_id, :as => :hidden %>
 		<%= form.input :section %>
 	<% end -%>
 	<%= form.buttons %>
