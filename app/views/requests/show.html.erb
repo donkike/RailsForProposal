@@ -3,6 +3,12 @@
 <div id="general-info">
   <div id="rfp-info">
     <h2><%= @request.name %></h2>
+    <ul>
+      <li><strong>Status: </strong><%= @request.status %></li>
+      <li><strong>Start date: </strong><%= @request.start_date %></li>
+      <li><strong>Decision date: </strong><%= @request.decision_date %></li>
+      <li><strong>Average: </strong><%= @request.average %></li>
+    </ul>    
   </div>
   <div id="responsibles">
     <strong>Responsables</strong>
