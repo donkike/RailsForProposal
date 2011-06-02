@@ -13,8 +13,8 @@
   <div id="responsibles">
     <strong>Responsables</strong>
     <ul>
-      <% for user in @request.users %>
-        <li><%= user.full_name %></li>
+      <% for section_role in @request.section_roles %>
+        <li><%= section_role.user.full_name %>(<em><%= section_role.request_section.section.name %></em>)</li>
       <% end -%>
     </ul>
     <%= link_to "Agregar responsable", new_request_section_role_path(@request) %>
@@ -23,7 +23,7 @@
     <strong>Secciones</strong>
     <ul>
       <% for request_section in @request.request_sections %>
-        <li><%= request_section.section.name %><%= link_to "Agregar item", new_request_request_section_section_item_path(@request, request_section) %></li>
+        <li><%= request_section.section.name %><%= link_to "+", request_request_section_path(@request, request_section) %></li>
       <% end -%>
     </ul>
     <%= link_to "Agregar sección", new_request_request_section_path(@request) %>

@@ -1,20 +1,11 @@
 <% title "Request Section" %>
 
-<p>
-  <strong>Section:</strong>
-  <%= @request_section.section_id %>
-</p>
-<p>
-  <strong>Request:</strong>
-  <%= @request_section.request_id %>
-</p>
-<p>
-  <strong>Comment:</strong>
-  <%= @request_section.comment %>
-</p>
+<strong><%= @request_section.request.name %></strong>
+(<em><%= @request_section.section.name %></em>)
+<ul>
+  <% for item in @request_section.section_items %>
+    <li><%= item.name %></li>
+  <% end -%>
+</ul>
 
-<p>
-  <%= link_to "Edit", edit_request_section_path(@request_section) %> |
-  <%= link_to "Destroy", @request_section, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", request_sections_path %>
-</p>
+<%= link_to "Agregar item", new_request_request_section_section_item_path(@request, @request_section) %>

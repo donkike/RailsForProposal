@@ -4,6 +4,7 @@ class RequestSectionsController < ApplicationController
   end
 
   def show
+    rfp
     @request_section = RequestSection.find(params[:id])
   end
 
