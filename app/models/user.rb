@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :username, :email
 
-  validates :username, :uniquenes => true
+  validates :username, :uniqueness => true
 
   has_many :section_roles
   
