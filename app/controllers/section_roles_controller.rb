@@ -34,6 +34,10 @@ class SectionRolesController < ApplicationController
     @section_role = SectionRole.find(params[:id])
   end
   
+  def do_rate
+    
+  end
+  
   private
   def rfp
     @request = Request.find(params[:request_id])
