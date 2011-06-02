@@ -1,4 +1,6 @@
 RailsForProposal::Application.routes.draw do
+  
+  match 'section_roles/:id/rate' => 'section_roles#rate'
 
   resources :sections
 

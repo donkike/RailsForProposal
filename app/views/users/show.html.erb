@@ -1,21 +1,36 @@
 <% title "User" %>
 
-<p>
-  <strong>First Name:</strong>
-  <%= @user.first_name %>
-</p>
-<p>
-  <strong>Last Name:</strong>
-  <%= @user.last_name %>
-</p>
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div id="user-info">
+  <p>
+    <strong>First Name:</strong>
+    <%= @user.first_name %>
+  </p>
+  <p>
+    <strong>Last Name:</strong>
+    <%= @user.last_name %>
+  </p>
+  <p>
+    <strong>Username:</strong>
+    <%= @user.username %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+
+</div>
+
+<div id="user-section-roles">
+  <h2>Roles pendientes</h2>
+  <ul>
+    <% for section_role in @user.section_roles %>
+      <li>
+        <%= section_role.request_section.request.name %>(<em><%= section_role.request_section.section.name %></em>)
+        <%= link_to "Calificar", :action => "rate", :controller => "section_roles", :id => section_role.id %>
+      </li>
+    <% end -%>
+  </ul>
+</div>
 
 <p>
   <%= link_to "Edit", edit_user_path(@user) %> |
