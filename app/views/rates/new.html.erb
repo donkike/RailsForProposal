@@ -1,0 +1,24 @@
+<% title "#{@section_role.request_section.request.name}"%>
+
+<p>
+  <%= @section_role.user.full_name %> - <%= @section_role.request_section.section.name %>
+</p>
+
+<%= form_tag '/rates' do %>
+  <%= hidden_field :section_role, :id %>
+  <table border="0" cellspacing="5" cellpadding="5">
+    <tr>
+      <th></th>
+      <% (1..5).each do |i| %><th><%= i %></th><% end -%>
+    </tr>
+    <% for item in @section_role.request_section.section_items %>
+      <tr>
+        <td><%= item.name %></td>
+        <% (1..5).each do |i| %>
+          <td><%= radio_button :section_items, item.id, i %></td>
+        <% end -%>
+      </tr>
+    <% end -%>
+  </table>
+  <%= submit_tag "Calificar" %>
+<% end -%>
