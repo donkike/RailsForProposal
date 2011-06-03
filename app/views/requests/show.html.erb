@@ -1,13 +1,14 @@
-<% title "Request" %>
+<% title "RFP" %>
 
 <div id="general-info">
   <div id="rfp-info">
     <h2><%= @request.name %></h2>
     <ul>
-      <li><strong>Status: </strong><%= @request.status %></li>
-      <li><strong>Start date: </strong><%= @request.start_date %></li>
-      <li><strong>Decision date: </strong><%= @request.decision_date %></li>
-      <li><strong>Average: </strong><%= @request.average %></li>
+      <li><strong>Estado: </strong><%= @request.status %></li>
+      <li><strong>Fecha de inicio: </strong><%= @request.start_date %></li>
+      <li><strong>Fecha de decisión: </strong><%= @request.decision_date %></li>
+	  <li><strong>Tiempo restante: </strong><%= (@request.decision_date) - (Date.current)%> días</li>
+      <li><strong>Puntaje: </strong><%= @request.average %></li>
     </ul>    
   </div>
   <div id="responsibles">
@@ -23,7 +24,7 @@
     <strong>Secciones</strong>
     <ul>
       <% for request_section in @request.request_sections %>
-        <li><%= request_section.section.name %><%= link_to "+", request_request_section_path(@request, request_section) %></li>
+        <li><%= request_section.section.name %><%= link_to "Agregar items", request_request_section_path(@request, request_section) %></li>
       <% end -%>
     </ul>
     <%= link_to "Agregar sección", new_request_request_section_path(@request) %>
