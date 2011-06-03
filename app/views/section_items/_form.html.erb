@@ -2,7 +2,7 @@
   <%= f.inputs do %>
     <%= f.input :request_section_id, :as => :hidden %>
     <%= f.input :name %>
-    <%= f.input :value %>
+    <%= f.input :value, :as => :select, :collection => (1..5) %>
   <% end -%>
   <%= f.buttons %>
 <% end %>
