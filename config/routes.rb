@@ -1,7 +1,6 @@
 RailsForProposal::Application.routes.draw do
   
-  match 'section_roles/:id/do_rate' => 'section_roles#do_rate'
-  match 'section_roles/:id/rate' => 'section_roles#rate'
+  resources :rates
 
   resources :sections
 

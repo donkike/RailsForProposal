@@ -1,6 +1,10 @@
 class SectionRolesController < ApplicationController
   def new    
     @section_role = rfp.section_roles.build
+    @sections = {}
+    for request_section in rfp.request_sections
+      @sections[request_section.section.name] = request_section.id
+    end
   end
 
   def edit
@@ -28,14 +32,6 @@ class SectionRolesController < ApplicationController
       rfp
       render :action => 'new'
     end
-  end
-  
-  def rate
-    @section_role = SectionRole.find(params[:id])
-  end
-  
-  def do_rate
-    
   end
   
   private

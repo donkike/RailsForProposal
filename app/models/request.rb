@@ -7,6 +7,10 @@ class Request < ActiveRecord::Base
   has_many :sections, :through => :request_sections
   has_many :section_roles, :through => :request_sections
   
+  def section(id)
+    self.request_sections.find_by_section_id(id)
+  end
+  
   def users    
     User.where(:id => self.section_roles.inject([]){ |a, s| a << s.user_id} )
   end

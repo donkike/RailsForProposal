@@ -4,7 +4,8 @@
   <%= @section_role.user.full_name %> - <%= @section_role.request_section.section.name %>
 </p>
 
-<%= form_tag 'do_rate' do %>
+<%= form_tag '/rates' do %>
+  <%= hidden_field :section_role, :id %>
   <table border="0" cellspacing="5" cellpadding="5">
     <tr>
       <th></th>
@@ -14,7 +15,7 @@
       <tr>
         <td><%= item.name %></td>
         <% (1..5).each do |i| %>
-          <td><%= radio_button_tag item.id, i %></td>
+          <td><%= radio_button :section_items, item.id, i %></td>
         <% end -%>
       </tr>
     <% end -%>
