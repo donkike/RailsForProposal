@@ -2,7 +2,7 @@ class RatesController < ApplicationController
   
   def show
      @section_role = SectionRole.find(params[:id])
-     @options = {'Si' => 'accept', 'No' => 'reject'}
+     @options = {'Si' => 'accepted', 'No' => 'rejected'}
   end
   
   def new

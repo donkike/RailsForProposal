@@ -88,6 +88,7 @@ div#general-info {
 	-webkit-border-radius: 10px;
 	padding: 10px;
 	width: 30%;
+	margin: 8px;
 	background-color: #E8D99E;
 }
 
@@ -97,6 +98,43 @@ div#general-info div {
 	background-color: #FFF;
 	padding: 5px;
 	margin: 3px;
+}
+
+div#rfp-status {
+	float: right;
+	width: 60%;
+}
+
+div.role-score {
+	float: right;
+}
+
+div.role-score {
+	border-style: solid;
+	font-size: 20px;
+}
+
+div#accept, div#reject {
+	float: left;
+	margin: 3px;
+	padding: 1px;
+	width: 45%;
+	border-style: solid;
+}
+
+div.user-accept, div.user-reject {
+	-moz-border-radius: 6px;	
+	-webkit-border-radius: 6px;
+	padding: 6px;
+	margin: 2px;
+}
+
+div.user-accept {
+	background-color: #55D8BB;
+}
+
+div.user-reject {
+	background-color: #A84E30;
 }
 
 div#sections li a {

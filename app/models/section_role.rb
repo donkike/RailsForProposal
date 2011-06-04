@@ -1,9 +1,13 @@
 class SectionRole < ActiveRecord::Base
+  
+  STATUS = %w[pending accepted rejected]
 
   belongs_to :user
   belongs_to :request_section
   
   scope :pending, where(:status => "pending")
+  scope :accepted, where(:status => "accepted")
+  scope :rejected, where(:status => "rejected")
   
   def rate(rates)
     count = 0

@@ -6,6 +6,7 @@
 <%= semantic_form_for [@section_role.user, @section_role] do |form| %>
   <%= form.inputs do %>
     <%= form.input :status, :label => "¿Apoya este RFP?", :as => :radio, :collection => @options %>
+    <%= form.input :comment, :label => "Comentario" %>
   <% end -%>
   <%= form.buttons %>
 <% end -%>
