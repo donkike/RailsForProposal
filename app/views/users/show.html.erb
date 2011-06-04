@@ -23,7 +23,7 @@
 <div id="user-section-roles">
   <h2>Roles pendientes</h2>
   <ul>
-    <% for section_role in @user.section_roles %>
+    <% for section_role in @user.section_roles.pending %>
       <li>
         <%= section_role.request_section.request.name %>(<em><%= section_role.request_section.section.name %></em>)
         <%= link_to "Calificar", new_rate_path(:id => section_role.id) %>
