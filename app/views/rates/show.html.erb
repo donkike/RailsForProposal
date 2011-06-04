@@ -4,3 +4,10 @@
 <p><strong>Puntaje: </strong><%= @section_role.average %></p>
 
 <p><em>¿Apoya este RFP?</em></p>
+
+<%= semantic_form_for @section_role do |form| %>
+  <%= form.inputs do %>
+    <%= @section_role.input :status, :as => :select, :collection => ['Aceptar', 'Rechazar'] %>
+  <% end -%>
+  <%= form.buttons %>
+<% end -%>
