@@ -1,24 +1,24 @@
 <%= form_for @request do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :name %><br />
+    <%= f.label 'Nombre' %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :start_date %><br />
+    <%= f.label 'Fecha de inicio' %><br />
     <%= f.date_select :start_date %>
   </p>
   <p>
-    <%= f.label :decision_date %><br />
+    <%= f.label 'Fecha de decision' %><br />
     <%= f.date_select :decision_date %>
   </p>
   <p>
-    <%= f.label :company %><br />
+    <%= f.label 'Compañía' %><br />
     <%= f.text_field :company %>
   </p>
   <p>
-    <%= f.label :filename %><br />
-    <%= f.text_field :filename %>
+    <%= f.label 'Archivo' %><br />
+    <%= f.file_field :filename %>
   </p>
-  <p><%= f.submit %></p>
+  <p><%= f.submit 'Crear' %></p>
 <% end %>
