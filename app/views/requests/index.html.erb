@@ -1,14 +1,14 @@
-<% title "Requests" %>
+<% title "RFP's" %>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Start Date</th>
-    <th>Decision Date</th>
-    <th>Company</th>
-    <th>Status</th>
-    <th>Average</th>
-    <th>Comment</th>
+    <th>Nombre</th>
+    <th>Fecha de inicio</th>
+    <th>Fecha de decision</th>
+    <th>Compañía</th>
+    <th>Estado</th>
+    <th>Puntaje</th>
+    <th>Comentario</th>
   </tr>
   <% for request in @requests %>
     <tr>
@@ -19,9 +19,9 @@
       <td><%= request.status %></td>
       <td><%= request.average %></td>
       <td><%= request.comment %></td>
-      <td><%= link_to "Show", request %></td>
-      <td><%= link_to "Edit", edit_request_path(request) %></td>
-      <td><%= link_to "Destroy", request, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Administrar", request %></td>
+      <td><%= link_to "Editar", edit_request_path(request) %></td>
+      <td><%= link_to "Eliminar", request, :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

@@ -1,20 +1,20 @@
-<% title "User" %>
+<% title "Usuario" %>
 
 <div id="user-info">
   <p>
-    <strong>First Name:</strong>
+    <strong>Nombre:</strong>
     <%= @user.first_name %>
   </p>
   <p>
-    <strong>Last Name:</strong>
+    <strong>Apellido:</strong>
     <%= @user.last_name %>
   </p>
   <p>
-    <strong>Username:</strong>
+    <strong>Nombre de usuario:</strong>
     <%= @user.username %>
   </p>
   <p>
-    <strong>Email:</strong>
+    <strong>E-mail:</strong>
     <%= @user.email %>
   </p>
 
@@ -33,7 +33,7 @@
 </div>
 
 <p>
-  <%= link_to "Edit", edit_user_path(@user) %> |
-  <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", users_path %>
+  <%= link_to "Editar datos", edit_user_path(@user) %> |
+  <%= link_to "Eliminar", @user, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Ver todos", users_path %>
 </p>

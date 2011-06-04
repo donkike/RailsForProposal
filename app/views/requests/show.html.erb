@@ -4,7 +4,7 @@
   <div id="rfp-info">
     <h2><%= @request.name %></h2>
     <ul>
-      <li><strong>Estado: </strong><%= @request.status %></li>
+      <li><strong>Estado: </strong><%= if (@request.status == 'pending') then 'Pendiente' end %></li>
       <li><strong>Fecha de inicio: </strong><%= @request.start_date %></li>
       <li><strong>Fecha de decisión: </strong><%= @request.decision_date %></li>
 	  <li><strong>Tiempo restante: </strong><%= (@request.decision_date) - (Date.current) %> días</li>
@@ -42,7 +42,7 @@
 
 
 <p>
-  <%= link_to "Edit", edit_request_path(@request) %> |
-  <%= link_to "Destroy", @request, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", requests_path %>
+  <%= link_to "Editar", edit_request_path(@request) %> |
+  <%= link_to "Eliminar", @request, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "Volver", requests_path %>
 </p>
