@@ -1,4 +1,4 @@
-<%= form_for @request do |f| %>
+<%= form_for @request, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
   <p>
     <%= f.label 'Nombre' %><br />
@@ -18,7 +18,7 @@
   </p>
   <p>
     <%= f.label 'Archivo' %><br />
-    <%= f.file_field :filename %>
+    <%= f.file_field :file_upload %>
   </p>
   <p><%= f.submit 'Crear' %></p>
 <% end %>
