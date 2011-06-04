@@ -8,6 +8,7 @@ class SectionRole < ActiveRecord::Base
   scope :pending, where(:status => "pending")
   scope :accepted, where(:status => "accepted")
   scope :rejected, where(:status => "rejected")
+  scope :not_pending, where("status != 'pending'")
   
   def rate(rates)
     count = 0
@@ -17,7 +18,7 @@ class SectionRole < ActiveRecord::Base
       count += section_item.value
     end
     self.average /= count
-    self.status = 'rated'
+    self.request_section.update_average
   end
   
 end

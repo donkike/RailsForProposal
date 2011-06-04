@@ -20,10 +20,20 @@ class Request < ActiveRecord::Base
   end
   
   def save_file
+    return unless self.file_upload
     self.filename = self.file_upload.original_filename
     directory = "public/upload/rfp"
     path = File.join(directory, self.filename)
     File.open(path, "wb") { |f| f.write(self.file_upload.read) }
+  end
+  
+  def update_average
+    sum = 0.0
+    for section in self.request_sections
+      sum += section.average
+    end    
+    self.average = sum / self.request_sections.count
+    save
   end
   
 end

@@ -42,7 +42,7 @@
       <li><strong>Fecha de inicio: </strong><%= @request.start_date %></li>
       <li><strong>Fecha de decisión: </strong><%= @request.decision_date %></li>
 	  <li><strong>Tiempo restante: </strong><%= (@request.decision_date) - (Date.current) %> días</li>
-      <li><strong>Puntaje: </strong><%= @request.average %></li>
+      <li><strong>Puntaje: </strong><%= "%0.2f" % @request.average %></li>
     </ul>    
   </div>
   <div id="responsibles">
@@ -58,7 +58,7 @@
     <strong>Secciones</strong>
     <ul>
       <% for request_section in @request.request_sections %>
-        <li><%= request_section.section.name %><%= link_to "Agregar items", request_request_section_path(@request, request_section) %></li>
+        <li><%= request_section.section.name %>(<em><%= "%0.2f" % request_section.average %></em>)<%= link_to "Agregar items", request_request_section_path(@request, request_section) %></li>
       <% end -%>
     </ul>
     <%= link_to "Agregar sección", new_request_request_section_path(@request) %>
