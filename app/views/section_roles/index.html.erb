@@ -1,15 +1,17 @@
 <table>
 
-<tr>
-	<td>
-		<%= if @requests.empty? 
-			"Oelo"
-		    else
-		    end
-		%>
-	</td>
-
-</tr>
-
+<th>RFP Name</th>
+<th>Section</th>
+<th>Response Time</th>
+<th>File</th>
+<% for section_role in @section_roles %>
+	<tr>
+		<td><%= section_role.request_section.request.name%></td>
+		<td><%= section_role.request_section.section.name %></td>
+		<td><%= section_role.request_section.request.response_time %></td>
+		<td><%= link_to "Download", section_role.request_section.request.filename %></td>
+		<td><%= link_to "Show", section_role.request_section.request %></td>
+	</tr>
+<% end %>
 </table>
 
