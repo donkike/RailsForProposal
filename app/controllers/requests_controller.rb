@@ -1,6 +1,7 @@
 class RequestsController < ApplicationController
   
-  before_filter :logged_in?, :except => [:index] 
+  before_filter :logged_in?, :except => [:index]
+  before_filter :is_admin?, :only => [:new, :edit, :create, :destroy] 
   
   def index
     @requests = Request.all

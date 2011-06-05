@@ -1,18 +1,20 @@
+<% title 'Roles pendientes' %>
+
 <table>
 
-<th>RFP Name</th>
-<th>Section</th>
-<th>Response Time</th>
-<th>Status</th>
-<th>File</th>
+<th>RFP</th>
+<th>Sección</th>
+<th>Tiempo de respuesta</th>
+<th>Estado</th>
+<th>Archivo</th>
 <% for section_role in @section_roles %>
 	<tr>
 		<td><%= section_role.request_section.request.name%></td>
 		<td><%= section_role.request_section.section.name %></td>
 		<td><%= section_role.request_section.request.response_time %></td>
 		<td><%= section_role.status %></td>
-		<td><%= link_to "Download", section_role.request_section.request.filename %></td>
-		<td><%= link_to "Show", section_role.request_section.request %></td>
+		<td><%= link_to "Descargar", section_role.request_section.request.filename %></td>
+		<td><%= link_to "Calificar", section_role.request_section.request %></td>
 	</tr>
 <% end %>
 </table>
