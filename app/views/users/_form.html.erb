@@ -24,5 +24,9 @@
     <%= f.label t(:email) %><br />
     <%= f.text_field :email %>
   </p>
+  <p>
+    <%= f.label t(:admin) %>
+    <%= f.check_box :admin %>
+  </p>
   <p><%= f.submit t(:create) %></p>
 <% end %>

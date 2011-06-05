@@ -13,3 +13,5 @@ sections = %w[Jurídica Contractual Financiera Técnica]
 sections.each do |section|
   Section.find_or_create_by_name(section)
 end
+
+User.create(:username => "admin", :email => "admin@admin.com", :password => "admin", :password_confirmation => "admin", :admin => true)

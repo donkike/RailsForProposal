@@ -1,4 +1,6 @@
 class RequestSectionsController < ApplicationController
+  before_filter :logged_in?
+  
   def index
     @request_sections = rfp.request_sections
   end

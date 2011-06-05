@@ -1,4 +1,6 @@
 class SectionItemsController < ApplicationController
+  before_filter :logged_in?
+  
   def index
     @section_items = SectionItem.all
   end

@@ -1,4 +1,5 @@
 class RatesController < ApplicationController
+  before_filter :logged_in?
   
   def show
      @section_role = SectionRole.find(params[:id])

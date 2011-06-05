@@ -4,6 +4,16 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
 
   helper_method :current_user
+  
+  protected 
+  
+  def logged_in?    
+    redirect_to(login_path, :notice => "Debe iniciar sesion") unless current_user
+  end
+  
+  def is_admin?
+    redirect_to(root_url, :notice => "No esta autorizado para ver este recurso") unless current_user.admin
+  end
 
   private
 

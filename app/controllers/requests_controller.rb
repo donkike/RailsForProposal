@@ -1,4 +1,7 @@
 class RequestsController < ApplicationController
+  
+  before_filter :logged_in?, :except => [:index] 
+  
   def index
     @requests = Request.all
   end

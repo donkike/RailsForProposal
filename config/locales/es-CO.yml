@@ -14,6 +14,7 @@ es-CO:
   password: "Contraseña"
   password_confirmation: "Confirme contraseña"
   email: "Correo electrónico"
+  admin: "Administrador"
   create: "Crear"
   
   rate: "Calificar"
