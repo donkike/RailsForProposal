@@ -11,6 +11,8 @@ es-CO:
   first_name: "Nombre"
   last_name: "Apellido(s)"
   username: "Nombre de usuario"
+  password: "Contraseña"
+  password_confirmation: "Confirme contraseña"
   email: "Correo electrónico"
   create: "Crear"
   
