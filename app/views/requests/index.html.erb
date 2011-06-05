@@ -2,13 +2,13 @@
 
 <table>
   <tr>
-    <th>Nombre</th>
-    <th>Fecha de inicio</th>
-    <th>Fecha de decision</th>
-    <th>Compañía</th>
-    <th>Estado</th>
-    <th>Puntaje</th>
-    <th>Comentario</th>
+    <th><%= t(:name) %></th>
+    <th><%= t(:start_date) %></th>
+    <th><%= t(:decision_date) %></th>
+    <th><%= t(:company) %></th>
+    <th><%= t(:status) %></th>
+    <th><%= t(:score) %></th>
+    <th><%= t(:comment) %></th>
   </tr>
   <% for request in @requests %>
     <tr>

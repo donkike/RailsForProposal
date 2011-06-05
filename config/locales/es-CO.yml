@@ -19,7 +19,7 @@ es-CO:
   comment: "Comentario"
   score: "Puntaje"
   do_you_support: "¿Apoya este RFP?"
-  rfp: RFPs
+  rfp: "RFPs"
   users: "Usuarios"
   accepted: "Aceptado"
   rejected: "Rechazado"
