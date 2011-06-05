@@ -3,8 +3,8 @@ class RequestSection < ActiveRecord::Base
   
   belongs_to :request
   belongs_to :section
-  has_many :section_roles
-  has_many :section_items
+  has_many :section_roles, :dependent => :destroy
+  has_many :section_items, :dependent => :destroy
   
   def update_average
     sum = 0.0

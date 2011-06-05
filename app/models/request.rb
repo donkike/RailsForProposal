@@ -5,7 +5,7 @@ class Request < ActiveRecord::Base
 
   validates :name, :uniqueness => true
 
-  has_many :request_sections
+  has_many :request_sections, :dependent => :destroy
   has_many :sections, :through => :request_sections
   has_many :section_roles, :through => :request_sections
   
@@ -30,7 +30,7 @@ class Request < ActiveRecord::Base
   def update_average
     sum = 0.0
     for section in self.request_sections
-      sum += section.average
+      sum += section.average if section.average > 0.0
     end    
     self.average = sum / self.request_sections.count
     save
