@@ -8,7 +8,12 @@
     <%= yield(:head) %>
   </head>
   <body>
+    
     <div id="container">
+      <div id="user-nav">
+        <%= link_to t(:rfp), requests_path %> |
+        <%= link_to t(:users), users_path %>
+      </div>
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>

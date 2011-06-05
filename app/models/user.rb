@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
   validates :username, :uniqueness => true
 
-  has_many :section_roles
+  has_many :section_roles, :dependent => :destroy
   
   def full_name
     "#{first_name} #{last_name}"

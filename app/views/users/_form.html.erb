@@ -1,20 +1,20 @@
 <%= form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label 'Nombre' %><br />
+    <%= f.label t(:first_name) %><br />
     <%= f.text_field :first_name %>
   </p>
   <p>
-    <%= f.label 'Apellido' %><br />
+    <%= f.label t(:last_name) %><br />
     <%= f.text_field :last_name %>
   </p>
   <p>
-    <%= f.label 'Nombre de usuario' %><br />
+    <%= f.label t(:username)%><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label 'E-mail' %><br />
+    <%= f.label t(:email) %><br />
     <%= f.text_field :email %>
   </p>
-  <p><%= f.submit 'Crear' %></p>
+  <p><%= f.submit t(:create) %></p>
 <% end %>

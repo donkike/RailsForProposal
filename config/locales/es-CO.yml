@@ -3,6 +3,39 @@
 
 es-CO:
   hello: "Hola"
+  name: "Nombre"
+  company: "Compañía"
+  file: "Archivo"
+  register: "Registrar"
+  
+  first_name: "Nombre"
+  last_name: "Apellido(s)"
+  username: "Nombre de usuario"
+  email: "Correo electrónico"
+  create: "Crear"
+  
+  rate: "Calificar"
+  send: "Enviar"
+  comment: "Comentario"
+  score: "Puntaje"
+  do_you_support: "¿Apoya este RFP?"
+  rfp: RFPs
+  users: "Usuarios"
+  accepted: "Aceptado"
+  rejected: "Rechazado"
+  status: "Estado"
+  start_date: "Fecha de inicio"
+  decision_date: "Fecha de decisión"
+  time_remaining: "Tiempo restante"
+  responsibles: "Responsables"
+  sections: "Secciones"
+  add_responsible: "Agregar responsable"
+  add_section: "Agregar sección"
+  
+  edit: "Editar"
+  remove: "Eliminar"
+  back: "Volver"
+  
   number:
     percentage:
       format:

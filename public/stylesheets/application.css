@@ -81,6 +81,11 @@ td, th {
 	border-collapse: collapse;
 }
 
+/* NAVIGATION */
+div#user-nav {
+	float: right;
+}
+
 /* RFP SHOW */
 
 div#general-info {

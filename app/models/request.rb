@@ -16,7 +16,7 @@ class Request < ActiveRecord::Base
   end
   
   def users    
-    User.where(:id => self.section_roles.inject([]){ |a, s| a << s.user_id} )
+    User.where(:id => self.section_roles.inject([]){ |a, s| a << s.user_id } )
   end
   
   def save_file
@@ -30,7 +30,7 @@ class Request < ActiveRecord::Base
   def update_average
     sum = 0.0
     for section in self.request_sections
-      sum += section.average if section.average > 0.0
+      sum += section.average if section.average > 0.0 
     end    
     self.average = sum / self.request_sections.count
     save

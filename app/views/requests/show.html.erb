@@ -3,7 +3,7 @@
 
 <div id="rfp-status">
   <div id="accept">
-    <h2>Aceptados</h2>
+    <h2><%= t(:accepted) %></h2>
     <% for role in @request.section_roles.accepted %>
       <div class="user-accept">
         <div class="role-score">
@@ -18,7 +18,7 @@
     <% end -%>
   </div>
   <div id="reject">
-    <h2>Rechazados</h2>
+    <h2><%= t(:rejected)%></h2>
     <% for role in @request.section_roles.rejected %>
       <div class="user-reject">
         <div class="role-score">
@@ -38,35 +38,35 @@
   <div id="rfp-info">
     <h2><%= @request.name %></h2>
     <ul>
-      <li><strong>Estado: </strong><%= if (@request.status == 'pending') then 'Pendiente' end %></li>
-      <li><strong>Fecha de inicio: </strong><%= @request.start_date %></li>
-      <li><strong>Fecha de decisión: </strong><%= @request.decision_date %></li>
-	  <li><strong>Tiempo restante: </strong><%= (@request.decision_date) - (Date.current) %> días</li>
-      <li><strong>Puntaje: </strong><%= "%0.2f" % @request.average %></li>
+      <li><strong><%= t(:status) %>: </strong><%= if (@request.status == 'pending') then 'Pendiente' end %></li>
+      <li><strong><%= t(:start_date) %>: </strong><%= @request.start_date %></li>
+      <li><strong><%= t(:decision_date) %>: </strong><%= @request.decision_date %></li>
+	  <li><strong><%= t(:time_remaining) %>: </strong><%= (@request.decision_date) - (Date.current) %> días</li>
+      <li><strong><%= t(:score) %>: </strong><%= "%0.2f" % @request.average %></li>
     </ul>    
   </div>
   <div id="responsibles">
-    <strong>Responsables</strong>
+    <strong><%= t(:responsibles) %></strong>
     <ul>
       <% for section_role in @request.section_roles %>
         <li><%= section_role.user.full_name %>(<em><%= section_role.request_section.section.name %></em>)</li>
       <% end -%>
     </ul>
-    <%= link_to "Agregar responsable", new_request_section_role_path(@request) %>
+    <%= link_to t(:add_responsible), new_request_section_role_path(@request) %>
   </div>
   <div id="sections">
-    <strong>Secciones</strong>
+    <strong><%= t(:sections) %></strong>
     <ul>
       <% for request_section in @request.request_sections %>
         <li><%= request_section.section.name %>(<em><%= "%0.2f" % request_section.average %></em>)<%= link_to "Agregar items", request_request_section_path(@request, request_section) %></li>
       <% end -%>
     </ul>
-    <%= link_to "Agregar sección", new_request_request_section_path(@request) %>
+    <%= link_to t(:add_section), new_request_request_section_path(@request) %>
   </div>
 </div>
 
 <p>
-  <%= link_to "Editar", edit_request_path(@request) %> |
-  <%= link_to "Eliminar", @request, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "Volver", requests_path %>
+  <%= link_to t(:edit), edit_request_path(@request) %> |
+  <%= link_to t(:remove), @request, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to t(:back), requests_path %>
 </p>

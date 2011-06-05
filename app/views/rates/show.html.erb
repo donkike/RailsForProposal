@@ -1,12 +1,14 @@
 <% title "#{@section_role.request_section.request.name} "%>
 <h2><%= "#{@section_role.request_section.section.name}" %></h2>
 
-<p><strong>Puntaje: </strong><%= @section_role.average %></p>
+<p><strong><%= t(:score)%>: </strong><%= "%0.2f" % @section_role.average %></p>
 
 <%= semantic_form_for [@section_role.user, @section_role] do |form| %>
   <%= form.inputs do %>
-    <%= form.input :status, :label => "¿Apoya este RFP?", :as => :radio, :collection => @options %>
-    <%= form.input :comment, :label => "Comentario" %>
+    <%= form.input :status, :label => t(:do_you_support), :as => :radio, :collection => @options %>
+    <%= form.input :comment, :label => t(:comment) %>
   <% end -%>
-  <%= form.buttons %>
+  <%= form.buttons do %>
+    <%= form.commit_button t(:send) %>
+  <% end -%>
 <% end -%>
