@@ -18,7 +18,7 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(params[:request])
     if @request.save
-      redirect_to @request, :notice => "Successfully created request."
+      redirect_to @request, :notice => "RFP creado exitosamente."
     else
       render :action => 'new'
     end
@@ -31,7 +31,7 @@ class RequestsController < ApplicationController
   def update
     @request = Request.find(params[:id])
     if @request.update_attributes(params[:request])
-      redirect_to @request, :notice  => "Successfully updated request."
+      redirect_to @request, :notice  => "RFP actualizado exitosamente."
     else
       render :action => 'edit'
     end
@@ -40,6 +40,6 @@ class RequestsController < ApplicationController
   def destroy
     @request = Request.find(params[:id])
     @request.destroy
-    redirect_to requests_url, :notice => "Successfully destroyed request."
+    redirect_to requests_url, :notice => "RFP eliminado exitosamente."
   end
 end

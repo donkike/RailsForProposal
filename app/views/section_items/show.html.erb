@@ -1,20 +1,20 @@
-<% title "Section Item" %>
+<% title "Item" %>
 
 <p>
-  <strong>Request Section:</strong>
+  <strong>Sección:</strong>
   <%= @section_item.request_section_id %>
 </p>
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @section_item.name %>
 </p>
 <p>
-  <strong>Value:</strong>
+  <strong>Valor:</strong>
   <%= @section_item.value %>
 </p>
 
 <p>
-  <%= link_to "Edit", edit_section_item_path(@section_item) %> |
-  <%= link_to "Destroy", @section_item, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", section_items_path %>
+  <%= link_to "Editar", edit_section_item_path(@section_item) %> |
+  <%= link_to "Eliminar", @section_item, :confirm => '¿Está seguro?', :method => :delete %> |
+  <%= link_to "Ver todos", section_items_path %>
 </p>

@@ -1,17 +1,17 @@
-<% title "Sections" %>
+<% title "Secciones" %>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
   </tr>
   <% for section in @sections %>
     <tr>
       <td><%= section.name %></td>
-      <td><%= link_to "Show", section %></td>
-      <td><%= link_to "Edit", edit_section_path(section) %></td>
-      <td><%= link_to "Destroy", section, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Detalle", section %></td>
+      <td><%= link_to "Editar", edit_section_path(section) %></td>
+      <td><%= link_to "Eliminar", section, :confirm => '¿Está seguro?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Section", new_section_path %></p>
+<p><%= link_to "Nueva Seccion", new_section_path %></p>

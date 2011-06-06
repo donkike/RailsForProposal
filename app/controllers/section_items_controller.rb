@@ -16,7 +16,7 @@ class SectionItemsController < ApplicationController
   def create
     @section_item = SectionItem.new(params[:section_item])
     if @section_item.save
-      redirect_to @section_item.request_section.request, :notice => "Successfully created section item."
+      redirect_to @section_item.request_section.request, :notice => "Item creado exitosamente."
     else
       request_section
       render :action => 'new'
@@ -30,7 +30,7 @@ class SectionItemsController < ApplicationController
   def update
     @section_item = SectionItem.find(params[:id])
     if @section_item.update_attributes(params[:section_item])
-      redirect_to @section_item, :notice  => "Successfully updated section item."
+      redirect_to @section_item, :notice  => "Item actualizado exitosamente."
     else
       render :action => 'edit'
     end
@@ -39,7 +39,7 @@ class SectionItemsController < ApplicationController
   def destroy
     @section_item = SectionItem.find(params[:id])
     @section_item.destroy
-    redirect_to section_items_url, :notice => "Successfully destroyed section item."
+    redirect_to section_items_url, :notice => "item eliminado exitosamente."
   end
   
   private

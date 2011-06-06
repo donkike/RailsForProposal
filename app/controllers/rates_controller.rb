@@ -14,7 +14,7 @@ class RatesController < ApplicationController
     @section_role = SectionRole.find(params[:section_role][:id])
     @section_role.rate(params[:section_items])
     @section_role.save
-    redirect_to rate_path(@section_role.id), :notice => "Rated!"
+    redirect_to rate_path(@section_role.id), :notice => "¡Calificado!"
   end
   
 end

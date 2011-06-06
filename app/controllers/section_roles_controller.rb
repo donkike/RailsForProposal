@@ -27,7 +27,7 @@ class SectionRolesController < ApplicationController
   def create
     @section_role = SectionRole.new(params[:section_role])
     if @section_role.save
-      redirect_to @section_role.request_section.request, :notice => "Successfully created role" 
+      redirect_to @section_role.request_section.request, :notice => "Rol asignado exitosamente" 
     else
       rfp
       render :action => 'new'

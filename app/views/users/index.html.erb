@@ -1,4 +1,4 @@
-<% title "Users" %>
+<% title "Usuarios" %>
 
 <table>
   <tr>
@@ -15,7 +15,7 @@
       <td><%= user.email %></td>
       <td><%= link_to "Perfil", user %></td>
       <td><%= link_to "Editar", edit_user_path(user) %></td>
-      <td><%= link_to "Eliminar", user, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Eliminar", user, :confirm => '¿Está seguro?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

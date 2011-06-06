@@ -22,7 +22,7 @@
       <td><%= link_to "Administrar", request %></td>
       <td><%= link_to "Ver", "/upload/rfp/#{request.filename}" %></td>
       <td><%= link_to "Editar", edit_request_path(request) %></td>
-      <td><%= link_to "Eliminar", request, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Eliminar", request, :confirm => '¿Está seguro?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>

@@ -1,8 +1,8 @@
 <%= semantic_form_for [@request_section.request, @request_section, @section_item] do |f| %>
   <%= f.inputs do %>
     <%= f.input :request_section_id, :as => :hidden %>
-    <%= f.input :name %>
-    <%= f.input :value, :as => :select, :collection => (1..5) %>
+    <%= f.input t(:name) %>
+    <%= f.input t(:value), :as => :select, :collection => (1..5) %>
   <% end -%>
   <%= f.buttons %>
 <% end %>

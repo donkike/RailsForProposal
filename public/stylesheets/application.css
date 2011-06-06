@@ -1,7 +1,14 @@
 body {
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
+  background-color: #039487;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif; 
   font-size: 14px;
+}
+
+h1 {
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif; 
+  font-size: 28px;
+  color: #000;
+  text-align: center;
 }
 
 a img {
@@ -19,9 +26,11 @@ a {
 }
 
 #container {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   width: 75%;
   margin: 0 auto;
-  background-color: #FFF;
+  background-color: #ACDEDB;
   padding: 20px 40px;
   border: solid 1px black;
   margin-top: 20px;
@@ -77,7 +86,7 @@ a {
 /* TABLES */
 td, th {
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 	border-collapse: collapse;
 }
 

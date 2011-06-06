@@ -1,21 +1,21 @@
-<% title "Request Sections" %>
+<% title "Secciones" %>
 
 <table>
   <tr>
-    <th>Section</th>
-    <th>Request</th>
-    <th>Comment</th>
+    <th>Seccion</th>
+    <th>RFP</th>
+    <th>Comentario</th>
   </tr>
   <% for request_section in @request_sections %>
     <tr>
       <td><%= request_section.section_id %></td>
       <td><%= request_section.request_id %></td>
       <td><%= request_section.comment %></td>
-      <td><%= link_to "Show", request_section %></td>
-      <td><%= link_to "Edit", edit_request_section_path(request_section) %></td>
-      <td><%= link_to "Destroy", request_section, :confirm => 'Are you sure?', :method => :delete %></td>
+      <td><%= link_to "Detalles", request_section %></td>
+      <td><%= link_to "Editar", edit_request_section_path(request_section) %></td>
+      <td><%= link_to "Eliminar", request_section, :confirm => '¿Está seguro?', :method => :delete %></td>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Request Section", new_request_request_section_path %></p>
+<p><%= link_to "Crear nueva seccion", new_request_request_section_path %></p>

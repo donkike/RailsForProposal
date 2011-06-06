@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user, :notice => "Successfully created user."
+      redirect_to @user, :notice => "Usuario creado exitosamente."
     else
       render :action => 'new'
     end
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      redirect_to @user, :notice  => "Successfully updated user."
+      redirect_to @user, :notice  => "Datos actualizados exitosamente."
     else
       render :action => 'edit'
     end
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to users_url, :notice => "Successfully destroyed user."
+    redirect_to users_url, :notice => "Usuario eliminado exitosamente."
   end
   
   private
