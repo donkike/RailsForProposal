@@ -38,7 +38,7 @@
   <div id="rfp-info">
     <h2><%= @request.name %></h2>
     <ul>
-      <li><strong><%= t(:status) %>: </strong><%= if t(@request.status) end %></li>
+      <li><strong><%= t(:status) %>: </strong><%= @request.status %></li>
       <li><strong><%= t(:start_date) %>: </strong><%= @request.start_date %></li>
       <li><strong><%= t(:decision_date) %>: </strong><%= @request.decision_date %></li>
 	  <li><strong><%= t(:time_remaining) %>: </strong><%= (@request.decision_date) - (Date.current) %> días</li>
