@@ -17,7 +17,7 @@ class RequestSectionsController < ApplicationController
   def create
     @request_section = RequestSection.new(params[:request_section])
     if @request_section.save
-      redirect_to @request_section.request, :notice => "Sección creada exitosamente."
+      redirect_to @request_section.request, :notice => "Seccion creada exitosamente."
     else
       render :action => 'new'
     end
@@ -30,7 +30,7 @@ class RequestSectionsController < ApplicationController
   def update
     @request_section = RequestSection.find(params[:id])
     if @request_section.update_attributes(params[:request_section])
-      redirect_to @request_section, :notice  => "Sección actualizada exitosamente."
+      redirect_to @request_section, :notice  => "Seccion actualizada exitosamente."
     else
       render :action => 'edit'
     end
@@ -39,7 +39,7 @@ class RequestSectionsController < ApplicationController
   def destroy
     @request_section = RequestSection.find(params[:id])
     @request_section.destroy
-    redirect_to request_sections_url, :notice => "Sección eliminada exitosamente."
+    redirect_to request_sections_url, :notice => "Seccion eliminada exitosamente."
   end
   
   private
