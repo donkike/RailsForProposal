@@ -201,4 +201,8 @@ div#user-info{
 	float: left;
 }
 
+div#decision {
+	clear: both;
+}
+
 

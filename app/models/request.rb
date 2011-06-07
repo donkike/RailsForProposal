@@ -11,6 +11,10 @@ class Request < ActiveRecord::Base
   
   before_save :save_file
   
+  def rated
+    self.status != 'pending'
+  end
+  
   def section(id)
     self.request_sections.find_by_section_id(id)
   end
@@ -37,7 +41,7 @@ class Request < ActiveRecord::Base
   end
   
   def finished
-    self.request_sections.map(&:finished)
+    self.request_sections.inject(true){ |res, sec| res &&= sec.finished }
   end
   
 end

@@ -25,6 +25,7 @@ es-CO:
   rfp: "RFPs"
   users: "Usuarios"
   user: "Usuario"
+  pending: Pendiente
   accepted: "Aceptado"
   rejected: "Rechazado"
   status: "Estado"

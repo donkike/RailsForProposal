@@ -12,9 +12,9 @@ class RatesController < ApplicationController
   
   def create
     @section_role = SectionRole.find(params[:section_role][:id])
+    render('new', :id => @section_role.id, :notice => "No ha calificado todos los items") if params[:section_items].count != @section_role.request_section.section_items.count
     @section_role.rate(params[:section_items])
-    @section_role.save
-    redirect_to rate_path(@section_role.id), :notice => "¡Calificado!"
+    redirect_to rate_path(@section_role.id), :notice => "Calificado!"
   end
   
 end

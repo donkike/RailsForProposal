@@ -32,13 +32,35 @@
       </div>
     <% end -%>
   </div>
+  <div id="decision">
+    <% if @request.rated %>
+      <em>Este RFP ya fue calificado</em>
+    <% elsif @request.finished %>  
+      <em>Todos los responsables han calificado el RFP</em>
+      <% if current_user.admin %>
+        <%= semantic_form_for @request do |form| %>
+          <%= form.inputs do %>
+            <%= form.input :status, :label => "¿Acepta este RFP?", :as => :radio, :collection => {'Si' => 'accepted', 'No' => 'rejected'} %>
+            <%= form.input :comment, :label => t(:comment), :input_html => {:rows => 8, :cols => 50} %>
+            <% end -%>
+            <%= form.buttons do %>
+              <%= form.commit_button t(:send) %>
+            <% end -%>            
+          <% end -%>
+        <% else -%>
+          <br/><em>Debe esperar que un usuario administrador califique el RFP</em>
+        <% end -%>
+    <% else %>
+      <em>Faltan responsables por calificar el RFP</em>
+    <% end -%>
+  </div>
 </div>
 
 <div id="general-info">
   <div id="rfp-info">
     <h2><%= @request.name %></h2>
     <ul>
-      <li><strong><%= t(:status) %>: </strong><%= @request.status %></li>
+      <li><strong><%= t(:status) %>: </strong><%= t(@request.status) %></li>
       <li><strong><%= t(:start_date) %>: </strong><%= @request.start_date %></li>
       <li><strong><%= t(:decision_date) %>: </strong><%= @request.decision_date %></li>
 	  <li><strong><%= t(:time_remaining) %>: </strong><%= (@request.decision_date) - (Date.current) %> días</li>

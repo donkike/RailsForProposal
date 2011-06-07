@@ -16,7 +16,7 @@
       <td><%= request.start_date %></td>
       <td><%= request.decision_date %></td>
       <td><%= request.company %></td>
-      <td><%= request.status %></td>
+      <td><%= t(request.status) %></td>
       <td><%= "%0.2f" % request.average %></td>
       <td><%= request.comment %></td>
       <td><%= link_to "Administrar", request %></td>
