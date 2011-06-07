@@ -16,4 +16,8 @@ class RequestSection < ActiveRecord::Base
     save
   end
   
+  def finished
+    self.section_roles.pending.empty?
+  end
+  
 end

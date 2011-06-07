@@ -36,4 +36,8 @@ class Request < ActiveRecord::Base
     save
   end
   
+  def finished
+    self.request_sections.map(&:finished)
+  end
+  
 end

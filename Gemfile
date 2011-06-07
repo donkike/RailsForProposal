@@ -6,6 +6,7 @@ gem 'nifty-generators', :group => :development
 gem 'formtastic'
 gem 'jquery-rails'
 gem 'authlogic'
+gem 'nestful'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

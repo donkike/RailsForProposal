@@ -6,6 +6,7 @@ tmp/
 ~*
 *#
 #*
+Gemfile.lock
 schema.rb
 .rvmrc
 .project
