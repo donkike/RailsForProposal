@@ -24,6 +24,7 @@ es-CO:
   do_you_support: "¿Apoya este RFP?"
   rfp: "RFPs"
   users: "Usuarios"
+  user: "Usuario"
   accepted: "Aceptado"
   rejected: "Rechazado"
   status: "Estado"

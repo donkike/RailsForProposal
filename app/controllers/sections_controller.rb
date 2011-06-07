@@ -16,7 +16,7 @@ class SectionsController < ApplicationController
   def create
     @section = Section.new(params[:section])
     if @section.save
-      redirect_to @section, :notice => "Sección creada exitosamente."
+      redirect_to @section, :notice => "Seccion creada exitosamente."
     else
       render :action => 'new'
     end
@@ -38,6 +38,6 @@ class SectionsController < ApplicationController
   def destroy
     @section = Section.find(params[:id])
     @section.destroy
-    redirect_to sections_url, :notice => "Sección eliminada exitosamente."
+    redirect_to sections_url, :notice => "Seccion eliminada exitosamente."
   end
 end
