@@ -32,6 +32,7 @@ es-CO:
   time_remaining: "Tiempo restante"
   responsibles: "Responsables"
   sections: "Secciones"
+  section: "Sección"
   add_responsible: "Agregar responsable"
   add_section: "Agregar sección"
   
