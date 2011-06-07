@@ -12,7 +12,7 @@
 		<td><%= section_role.request_section.request.name%></td>
 		<td><%= section_role.request_section.section.name %></td>
 		<td><%= section_role.request_section.request.response_time %></td>
-		<td><%= section_role.status %></td>
+		<td><%= t(section_role.status) %></td>
 		<td><%= link_to "Descargar", section_role.request_section.request.filename %></td>
 		<td><%= link_to "Calificar", section_role.request_section.request %></td>
 	</tr>
