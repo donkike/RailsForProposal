@@ -4,17 +4,18 @@
 
 <th>RFP</th>
 <th>Sección</th>
-<th>Tiempo de respuesta</th>
+<th>Fecha de inicio</th>
+<th>Fecha de decisión</th>
 <th>Estado</th>
 <th>Archivo</th>
 <% for section_role in @section_roles %>
 	<tr>
 		<td><%= section_role.request_section.request.name%></td>
 		<td><%= section_role.request_section.section.name %></td>
-		<td><%= section_role.request_section.request.response_time %></td>
+		<td><%= section_role.request_section.request.start_date %></td>
+		<td><%= section_role.request_section.request.decision_date %></td>
 		<td><%= t(section_role.status) %></td>
 		<td><%= link_to "Descargar", section_role.request_section.request.filename %></td>
-		<td><%= link_to "Calificar", section_role.request_section.request %></td>
 	</tr>
 <% end %>
 </table>

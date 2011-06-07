@@ -28,6 +28,7 @@ es-CO:
   pending: Pendiente
   accepted: "Aceptado"
   rejected: "Rechazado"
+  rated: "Calificado"
   status: "Estado"
   start_date: "Fecha de inicio"
   decision_date: "Fecha de decisión"
