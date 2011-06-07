@@ -4,8 +4,8 @@
     <%= f.input :name, :label => t(:name) %>
     <%= f.input :value, :label => t(:value), :as => :select, :collection => (1..5) %>
   <% end -%>
-  <%= form.buttons do  %>
-	<%= form.commit_button :label => "Agregar Item" %>
+  <%= f.buttons do  %>
+	<%= f.commit_button :label => "Agregar Item" %>
   <% end %>
 
 <% end %>
