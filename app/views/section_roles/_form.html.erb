@@ -3,5 +3,7 @@
     <%= form.input :user, :label => t(:user) %>
     <%= form.input :request_section_id, :label => t(:section), :as => :select, :collection => @sections %>
   <% end -%>
-  <%= form.buttons %>
+  <%= form.buttons do  %>
+	<%= form.commit_button :label => "Agregar Item" %>
+  <% end %>
 <% end -%>
