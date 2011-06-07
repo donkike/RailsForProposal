@@ -32,6 +32,24 @@
       </div>
     <% end -%>
   </div>
+  <div id="decision">
+    <% if @request.rated %>
+      <em>Este RFP ya fue calificado</em>
+    <% elsif @request.finished %>
+      <em>Todos los responsables han calificado el RFP</em>
+      <%= semantic_form_for @request do |form| %>
+        <%= form.inputs do %>
+          <%= form.input :status, :label => "¿Acepta este RFP?", :as => :radio, :collection => {'Si' => 'accepted', 'No' => 'rejected'} %>
+          <%= form.input :comment, :label => t(:comment), :input_html => {:rows => 8, :cols => 50} %>
+        <% end -%>
+        <%= form.buttons do %>
+          <%= form.commit_button t(:send) %>
+        <% end -%>
+      <% end -%>
+    <% else %>
+      <em>Faltan responsables por calificar el RFP</em>
+    <% end -%>
+  </div>
 </div>
 
 <div id="general-info">

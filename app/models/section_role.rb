@@ -18,6 +18,8 @@ class SectionRole < ActiveRecord::Base
       count += section_item.value
     end
     self.average /= count
+    self.status = 'rated'
+    self.save
     self.request_section.update_average
   end
   

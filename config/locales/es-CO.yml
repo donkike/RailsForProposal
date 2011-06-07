@@ -36,6 +36,7 @@ es-CO:
   section: "Sección"
   add_responsible: "Agregar responsable"
   add_section: "Agregar sección"
+  value: "Valor"
   
   edit: "Editar"
   remove: "Eliminar"
